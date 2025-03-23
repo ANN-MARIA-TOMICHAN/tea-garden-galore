@@ -1,0 +1,56 @@
+
+.text-tea-dark {
+  color: #8B5A2B;
+}
+
+.text-tea {
+  color: #8B5A2B;
+}
+
+.contact-form-container, .contact-info-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-container:hover, .contact-info-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1) !important;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link {
+  color: #8B5A2B;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+.social-link:hover {
+  color: #556B2F;
+  transform: translateY(-3px);
+}
+
+.map-container {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e9ecef;
+}
+
+.map-placeholder {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: repeating-linear-gradient(
+    45deg,
+    #f5f5f5,
+    #f5f5f5 10px,
+    #e9ecef 10px,
+    #e9ecef 20px
+  );
+}

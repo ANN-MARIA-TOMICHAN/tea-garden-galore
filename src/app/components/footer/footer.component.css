@@ -1,0 +1,16 @@
+
+.text-tea {
+  color: #8B5A2B;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-link {
+  color: #556B2F;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #8B5A2B;
+  text-decoration: underline;
+}

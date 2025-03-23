@@ -1,0 +1,102 @@
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #f9f7f2;
+}
+
+.hero-content {
+  animation: slide-up 0.8s ease-out;
+}
+
+.text-tea-dark {
+  color: #8B5A2B;
+}
+
+.text-tea-green {
+  color: #556B2F;
+}
+
+.hero-image-container {
+  position: relative;
+  animation: fade-in 1s ease-out;
+}
+
+.steam-effect {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  filter: blur(15px);
+  animation: steam 3s infinite ease-out;
+}
+
+/* Features Section */
+.feature-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.text-tea {
+  color: #8B5A2B;
+}
+
+.section-title {
+  position: relative;
+  color: #556B2F;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #8B5A2B, #556B2F);
+  width: 60px;
+  margin: 0 auto;
+}
+
+/* Testimonials */
+.testimonial-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Newsletter */
+.newsletter-card {
+  background-color: #f9f7f2;
+  border-left: 4px solid #8B5A2B;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes steam {
+  0%, 100% { opacity: 0; transform: translateY(0) scale(1); }
+  50% { opacity: 0.7; transform: translateY(-20px) scale(1.2); }
+}

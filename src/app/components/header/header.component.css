@@ -1,0 +1,15 @@
+
+.navbar-brand h1 {
+  font-family: 'Playfair Display', serif;
+  color: #8B5A2B;
+}
+
+.nav-link {
+  color: #556B2F;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #8B5A2B;
+}

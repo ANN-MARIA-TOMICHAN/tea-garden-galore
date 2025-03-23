@@ -1,0 +1,135 @@
+
+<div class="contact-container">
+  <section class="contact-hero-section py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h1 class="display-4 fw-bold text-tea-dark mb-3">Contact Us</h1>
+          <p class="lead mb-0">We'd love to hear from you. Get in touch with us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-details-section py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="contact-form-container p-4 bg-white rounded shadow-sm">
+            <h2 class="h4 mb-4 text-tea-dark">Send Us a Message</h2>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" formControlName="name" 
+                       [ngClass]="{'is-invalid': submitted && contactForm.controls['name'].errors}">
+                <div *ngIf="submitted && contactForm.controls['name'].errors" class="invalid-feedback">
+                  Please provide your name.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" formControlName="email"
+                       [ngClass]="{'is-invalid': submitted && contactForm.controls['email'].errors}">
+                <div *ngIf="submitted && contactForm.controls['email'].errors" class="invalid-feedback">
+                  Please provide a valid email address.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" formControlName="subject"
+                       [ngClass]="{'is-invalid': submitted && contactForm.controls['subject'].errors}">
+                <div *ngIf="submitted && contactForm.controls['subject'].errors" class="invalid-feedback">
+                  Please provide a subject.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" formControlName="message"
+                          [ngClass]="{'is-invalid': submitted && contactForm.controls['message'].errors}"></textarea>
+                <div *ngIf="submitted && contactForm.controls['message'].errors" class="invalid-feedback">
+                  Please provide a message (at least 10 characters).
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success">Send Message</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="contact-info-container p-4 bg-white rounded shadow-sm h-100">
+            <h2 class="h4 mb-4 text-tea-dark">Contact Information</h2>
+            <div class="contact-info-item d-flex mb-4">
+              <div class="contact-icon me-3">
+                <i class="bi bi-geo-alt-fill fs-4 text-tea"></i>
+              </div>
+              <div>
+                <h3 class="h6 mb-1">Our Location</h3>
+                <p class="mb-0">123 Tea Garden Street, London, UK</p>
+              </div>
+            </div>
+            <div class="contact-info-item d-flex mb-4">
+              <div class="contact-icon me-3">
+                <i class="bi bi-telephone-fill fs-4 text-tea"></i>
+              </div>
+              <div>
+                <h3 class="h6 mb-1">Phone Number</h3>
+                <p class="mb-0">+44 123 456 7890</p>
+              </div>
+            </div>
+            <div class="contact-info-item d-flex mb-4">
+              <div class="contact-icon me-3">
+                <i class="bi bi-envelope-fill fs-4 text-tea"></i>
+              </div>
+              <div>
+                <h3 class="h6 mb-1">Email Address</h3>
+                <p class="mb-0">info@teagardengalore.com</p>
+              </div>
+            </div>
+            <div class="contact-info-item d-flex mb-4">
+              <div class="contact-icon me-3">
+                <i class="bi bi-clock-fill fs-4 text-tea"></i>
+              </div>
+              <div>
+                <h3 class="h6 mb-1">Business Hours</h3>
+                <p class="mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p class="mb-0">Saturday: 10:00 AM - 4:00 PM</p>
+              </div>
+            </div>
+
+            <div class="social-media mt-4">
+              <h3 class="h6 mb-3">Follow Us</h3>
+              <div class="d-flex gap-3">
+                <a href="#" class="social-link">
+                  <i class="bi bi-facebook fs-4"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="bi bi-instagram fs-4"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="bi bi-twitter fs-4"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="bi bi-pinterest fs-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="map-container rounded shadow-sm">
+            <!-- In a real app, this would be a Google Maps embed -->
+            <div class="map-placeholder d-flex align-items-center justify-content-center">
+              <p class="text-muted">Map Placeholder - Google Maps would be embedded here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

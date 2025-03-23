@@ -1,0 +1,148 @@
+
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="hero-content animate-slide-up">
+            <h1 class="display-4 fw-bold text-tea-dark mb-3">Discover the Finest <span class="text-tea-green">Tea</span> Collection</h1>
+            <p class="lead mb-4">Elevate your tea experience with our premium selection of teas sourced from the finest gardens around the world.</p>
+            <div class="d-flex gap-3">
+              <a href="#featured" class="btn btn-success btn-lg">Explore Teas</a>
+              <a href="/about" class="btn btn-outline-secondary btn-lg">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image-container animate-fade-in">
+            <img src="assets/images/hero-tea.jpg" alt="Premium Tea Collection" class="img-fluid rounded shadow">
+            <div class="steam-effect d-none d-lg-block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Why Choose Our Teas?</h2>
+        <p class="text-muted">Experience the difference in every cup</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card text-center p-4 h-100">
+            <div class="feature-icon mb-3">
+              <i class="bi bi-award fs-1 text-tea"></i>
+            </div>
+            <h3 class="h5 mb-3">Premium Quality</h3>
+            <p class="mb-0">Sourced from renowned tea gardens and carefully curated for exceptional taste.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card text-center p-4 h-100">
+            <div class="feature-icon mb-3">
+              <i class="bi bi-tree fs-1 text-tea"></i>
+            </div>
+            <h3 class="h5 mb-3">Sustainable Practices</h3>
+            <p class="mb-0">We support eco-friendly farming and fair trade practices for a better tomorrow.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card text-center p-4 h-100">
+            <div class="feature-icon mb-3">
+              <i class="bi bi-cup-hot fs-1 text-tea"></i>
+            </div>
+            <h3 class="h5 mb-3">Authentic Flavors</h3>
+            <p class="mb-0">Experience traditional processing methods that preserve natural aromas and tastes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Teas Section -->
+  <section id="featured" class="featured-teas-section py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Our Featured Teas</h2>
+      <div class="row g-4">
+        <div *ngFor="let tea of featuredTeas" class="col-md-6 col-lg-3">
+          <app-tea-product [product]="tea"></app-tea-product>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="/shop" class="btn btn-outline-success btn-lg">View All Teas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">What Our Customers Say</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="testimonial-card text-center p-4">
+                  <i class="bi bi-quote fs-1 text-tea-medium opacity-25 mb-3"></i>
+                  <p class="lead mb-3">"The Earl Grey Supreme is absolutely divine. The bergamot flavor is perfectly balanced, not too overpowering. It's become my daily morning ritual."</p>
+                  <div class="d-flex justify-content-center">
+                    <div class="text-tea-dark">
+                      <p class="fw-bold mb-0">Sarah Johnson</p>
+                      <p class="small text-muted">Tea Enthusiast</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="testimonial-card text-center p-4">
+                  <i class="bi bi-quote fs-1 text-tea-medium opacity-25 mb-3"></i>
+                  <p class="lead mb-3">"I'm impressed with the quality and freshness of the teas. The Darjeeling First Flush is exceptional and reminds me of my travels in India."</p>
+                  <div class="d-flex justify-content-center">
+                    <div class="text-tea-dark">
+                      <p class="fw-bold mb-0">Michael Chen</p>
+                      <p class="small text-muted">Tea Connoisseur</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="newsletter-card bg-light p-4 p-md-5 rounded shadow-sm text-center">
+            <h3 class="mb-3">Join Our Tea Community</h3>
+            <p class="mb-4">Subscribe to our newsletter for exclusive offers, brewing tips, and new tea releases.</p>
+            <form class="newsletter-form">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Your email address" aria-label="Email address">
+                <button class="btn btn-success" type="submit">Subscribe</button>
+              </div>
+              <p class="form-text text-muted small">We respect your privacy and will never share your information.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
